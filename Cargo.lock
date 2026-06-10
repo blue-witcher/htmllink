@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "httplink"
-version = "1.0.3"
+name = "htmllink"
+version = "2.0.0"
