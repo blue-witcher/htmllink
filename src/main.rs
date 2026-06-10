@@ -3,7 +3,10 @@ use std::env;
 fn create_html_link(link: &str) {
     let pre = "<html>\n<head>\n";
     let post = "\n</head>\n</html>";
-    println!("{}<meta http-equiv=\"refresh\" content=\"0; url={}\" />{}", pre, link, post);
+    println!(
+        "{}<meta http-equiv=\"refresh\" content=\"0; url={}\" />{}",
+        pre, link, post
+    );
 }
 
 fn main() {
