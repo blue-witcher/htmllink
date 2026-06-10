@@ -4,7 +4,8 @@ version = "1.0.3"
 edition = "2024"
 license = "AGPL-3.0-or-later"
 
-[profile.release]
+[profile.opt]
+inherits = 'release'
 lto = true
 codegen-units = 1
 panic = "abort"
