@@ -1,1 +1,1 @@
-![demo.gif](https://files.prismstone.zone/u/httplink.gif)
+![demo.gif](vhs_demo/htmllink_demo.webp)
