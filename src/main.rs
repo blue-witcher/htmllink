@@ -1,6 +1,6 @@
 use std::env;
 
-fn create_http_link(link: &str) {
+fn create_html_link(link: &str) {
     let pre = "<html>\n<head>\n";
     let post = "\n</head>\n</html>";
     println!("{}<meta http-equiv=\"refresh\" content=\"0; url={}\" />{}", pre, link, post);
@@ -8,12 +8,10 @@ fn create_http_link(link: &str) {
 
 fn main() {
     // dump cli arguments to args variable
-    let args: Vec<String> = env::args().skip(1).collect();
-    // check if only one argument was given
-    if args.iter().count() == 1 {
-        let link = &args[0];
-        create_http_link(link);
+    let args = env::args().skip(1).collect::<Vec<String>>().join(" ");
+    if args.len() != 0 {
+        create_html_link(&args);
     } else {
-        eprintln!("You need to provide exactly one URL as a command-line argument.")
+        eprintln!("You need to provide a URL via command-line argument.")
     }
 }
